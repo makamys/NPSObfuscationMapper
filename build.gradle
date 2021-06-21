@@ -1,4 +1,15 @@
 apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+mainClassName = 'makamys.Hello'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
 
 jar {
     manifest {
@@ -6,4 +17,8 @@ jar {
             'Main-Class': 'makamys.Hello'
         )
     }
+	
+  from {
+    configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+  }
 }
