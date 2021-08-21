@@ -16,7 +16,7 @@ import java.util.Map;
 import org.graalvm.visualvm.lib.jfluid.results.cpu.CPUResultsSnapshot;
 import org.graalvm.visualvm.lib.profiler.LoadedSnapshot;
 
-class Hello {
+class NPSObfuscationMapper {
 	
 	public static void main(String[] args){
 		if(args.length != 2) {
@@ -72,6 +72,6 @@ class Hello {
 	}
 	
 	private static String getJarName() {
-		return new java.io.File(Hello.class.getProtectionDomain().getCodeSource().getLocation().getPath()).getName();
+		return new java.io.File(NPSObfuscationMapper.class.getProtectionDomain().getCodeSource().getLocation().getPath()).getName();
 	}
 }
