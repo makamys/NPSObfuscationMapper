@@ -20,7 +20,7 @@ class NPSObfuscationMapper {
 	
 	public static void main(String[] args){
 		if(args.length != 2) {
-			System.out.println("Usage: java -jar " + getJarName() + " MCPDIR NPS\n\nRemaps the obfuscated method names in NPS to deobfuscated ones using the mappings in MCPDIR (which should contain methods.csv)");
+			System.out.println("Usage: java -jar " + getJarName() + " MCPDIR NPS\n\nRemaps the obfuscated method names in NPS to deobfuscated ones using the mappings in MCPDIR (which should contain methods.csv).\nThe output file will have the same name as NPS, with the '-deobf' suffix added.");
 			System.exit(1);
 		}
 		File mcpDir = new File(args[0]);
