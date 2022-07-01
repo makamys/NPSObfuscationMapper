@@ -5,7 +5,8 @@ You can deobfuscate VisualVM NPS snapshots of Minecraft with this tool.
 ```
 Usage: java -jar NPSObfuscationMapper-0.0.jar MCPDIR NPS
 
-Remaps the obfuscated method names in NPS to deobfuscated ones using the mappings in MCPDIR (which should contain methods.csv)
+Remaps the obfuscated method names in NPS to deobfuscated ones using the mappings in MCPDIR (which should contain methods.csv).
+The output file will have the same name as NPS, with the '-deobf' suffix added.
 ```
 ## Example
 ```
